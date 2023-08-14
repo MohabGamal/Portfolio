@@ -23,7 +23,7 @@ const FeedbackCard = ({
       <img src={image} className="rounded-sm h-[333px]" />
     </Tilt>
     <div className="bg-black-200 p-4 rounded-3xl mt-[2rem] shadow-md shadow-primary flex justify-between items-center gap-1 hover:scale-110 transition-all duration-300">
-      <div className="flex-1 flex flex-col">
+      <div className="flex flex-col flex-1">
         <p className="text-secondary font-medium text-[16px]">
           <span className="tailwind-blue-text-gradient">@</span> {name}
         </p>

@@ -34,15 +34,15 @@ const Hero = () => {
         }`}
       >
         <div className="relative p-2 px-5 bg-black-200 rounded-t-xl">
-          <h3 className="text-xl text-white text-center">Playground Settings</h3>
+          <h3 className="text-xl text-center text-white">Playground Settings</h3>
           <SmallArrowSvg
             className="absolute -right-5 top-9 w-7 h-5 fill-[#e8eaed] hover:fill-white transform -rotate-90 cursor-pointer"
             onClick={() => setShowPlayground(false)}
           />  
         </div>
-        <div className="-mt-2 bg-tertiary text-white rounded-b-xl flex items-center gap-2 p-3 pt-4">
+        <div className="flex items-center gap-2 p-3 pt-4 -mt-2 text-white bg-tertiary rounded-b-xl">
           <p className="">Animation</p>
-          <div className="w-full bg-black-200 rounded-md relative flex items-center justify-between px-1">
+          <div className="relative flex items-center justify-between w-full px-1 rounded-md bg-black-200">
             <select
               className="absolute inset-0 opacity-0"
               onChange={(e) => setAnimation(e.target.value)}
@@ -84,9 +84,9 @@ const Hero = () => {
         <div
           className={`${styles.paddingX} absolute inset-0 top-[14%] max-auto flex flex-row items-start gap-5`}
         >
-          <div className="flex flex-col justify-center items-center mt-5">
+          <div className="flex flex-col items-center justify-center mt-5">
             <div className="w-5 h-5 rounded-full bg-pinkish" />
-            <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-pink-500 " />
+            <div className="w-1 h-40 sm:h-80 bg-gradient-to-b from-pink-500 " />
           </div>
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
@@ -94,7 +94,7 @@ const Hero = () => {
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               I am a computer science graduate.
-              <br className="sm:block hidden" />I develop full-stack Web
+              <br className="hidden sm:block" />I develop full-stack Web
               Applications.
             </p>
           </div>
@@ -106,7 +106,7 @@ const Hero = () => {
         redo={redo}
       />
       <MoveHere />
-      <div className="absolute xs:bottom-10 bottom-5 w-full flex justify-center items-center">
+      <div className="absolute flex items-center justify-center w-full xs:bottom-10 bottom-5">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-pinkish flex justify-center items-start p-2">
             <motion.div
@@ -118,7 +118,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-3 h-3 mb-1 rounded-full bg-secondary"
             />
           </div>
         </a>

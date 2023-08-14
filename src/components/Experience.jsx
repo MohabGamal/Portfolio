@@ -23,7 +23,7 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex items-center justify-center w-full h-full">
           <img
             src={experience.icon}
             alt={experience.company_name}
@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience }) => {
           {experience.company_name}
         </p>
       </div>
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <ul className="mt-5 ml-5 space-y-2 list-disc">
         {experience.points.map((point, index) => {
           const [expanded, setExpanded] = useState(false)
           const MAX_CHAR = 150
@@ -57,7 +57,7 @@ const ExperienceCard = ({ experience }) => {
                 {expanded ? point : trimmedPoint}
                 {point.length > MAX_CHAR && (
                   <span
-                    className="text-xl m-1 text-pinkish group-hover:underline cursor-pointer"
+                    className="m-1 text-xl cursor-pointer text-pinkish group-hover:underline"
                     onClick={() => setExpanded(!expanded)}
                   >
                     {expanded ? "See less" : "...See more"}
@@ -81,7 +81,7 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
+      <div className="flex flex-col mt-20">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard

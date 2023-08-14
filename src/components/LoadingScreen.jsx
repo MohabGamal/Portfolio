@@ -26,7 +26,7 @@ const LoadingScreen = () => {
     >
       <div className="text-5xl md:text-9xl font-bold text-[#D9017A] relative">
         <div
-          className="absolute left-0 top-0 overflow-hidden truncate text-clip transition-all duration-500"
+          className="absolute top-0 left-0 overflow-hidden truncate transition-all duration-500 text-clip"
           style={{
             width: `${progress.progress}%`,
           }}

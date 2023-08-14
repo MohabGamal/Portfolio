@@ -14,7 +14,7 @@ const ServiceCard = ({ title, index, Model }) => {
         className="w-full violet-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div className="bg-tertiary rounded-[20px] py-5 px-5 h-[380px] relative">
-          {/* <img src={icon} alt={title} className="w-16 h-16 object-contain" /> */}
+          {/* <img src={icon} alt={title} className="object-contain w-16 h-16" /> */}
           <MoveHere/>
           <Model />
         </div>
@@ -56,7 +56,7 @@ const About = () => {
           English professionally.
         </p>
       </motion.div>
-      <div className="mt-20 flex flex-wrap gap-12 justify-center">
+      <div className="flex flex-wrap justify-center gap-12 mt-20">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

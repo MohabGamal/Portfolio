@@ -24,7 +24,7 @@ const Tech = () => {
     >
       {activeTechnologies.map((technology) => (
         <div
-          className="w-28 h-28 relative"
+          className="relative w-28 h-28"
           key={technology.name}
           onMouseDown={() => handleTechnologyDrag(technology)}
         >
@@ -42,7 +42,7 @@ const Tech = () => {
             {technology.name}
           </div>
           {/* {technology?.pairTechnologyIcon && technology.active && (
-              <div className="h-7 w-7 pulse bg-gradient-to-b from-pink-600 rounded-full top-2 right-1 absolute animate-bounce">
+              <div className="absolute rounded-full h-7 w-7 pulse bg-gradient-to-b from-pink-600 top-2 right-1 animate-bounce">
                 <span style={{ "--i": 0 }} />
                 <span style={{ "--i": 1 }} />
                 <span style={{ "--i": 2 }} />

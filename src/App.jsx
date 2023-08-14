@@ -21,8 +21,8 @@ const App = () => {
     <>
       <LoadingScreen  />
       <BrowserRouter>
-        <div className="overflow-hidden relative z-0 bg-primary scrollbar-thin scrollbar-thumb-pinkish scrollbar-track-gray-900">
-          <div className="bg-hero-pattern bg-no-repeat bg-left">
+        <div className="relative z-0 overflow-hidden bg-primary scrollbar-thin scrollbar-thumb-pinkish scrollbar-track-gray-900">
+          <div className="bg-left bg-no-repeat bg-hero-pattern">
             <Navbar />
             <Hero />
           </div>
