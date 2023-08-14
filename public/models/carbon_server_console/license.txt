@@ -1,0 +1,11 @@
+Model Information:
+* title:	Carbon Server Console
+* source:	https://sketchfab.com/3d-models/carbon-server-console-7927dc6a0bc846e48070bd0cce4b018e
+* author:	urbanmasque (https://sketchfab.com/urbanmasque)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Carbon Server Console" (https://sketchfab.com/3d-models/carbon-server-console-7927dc6a0bc846e48070bd0cce4b018e) by urbanmasque (https://sketchfab.com/urbanmasque) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
