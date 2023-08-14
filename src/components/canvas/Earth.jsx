@@ -10,20 +10,7 @@ import CanvasLoader from "../Loader"
 
 useGLTF.preload('models/planet/scene.gltf');
  
-const Earth = ({ isXlarge }) => {
-  const earth = useGLTF('models/planet/scene.gltf')
-  return (
-    <primitive
-      object={earth.scene}
-      scale={isXlarge ? 2 : 3}
-      position-y={0}
-      rotation-y={0}
-      rotation={[-0.05, -0.2, 0.4]}
-    />
-  )
-}
-
-const EarthCanvas = () => {
+const Earth = () => {
   const [isXlarge, setIsXlarge] = useState(false)
 
   useEffect(() => {
@@ -46,6 +33,20 @@ const EarthCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange)
     }
   }, [isXlarge])
+  const earth = useGLTF('models/planet/scene.gltf')
+  return (
+    <primitive
+      object={earth.scene}
+      scale={isXlarge ? 2.3 : 3.2}
+      position-y={0}
+      rotation-y={0}
+      rotation={[-0.05, -0.2, 0.4]}
+    />
+  )
+}
+
+const EarthCanvas = () => {
+
   return (
     <Canvas
       shadows
@@ -73,7 +74,7 @@ const EarthCanvas = () => {
         {/* <Sky sunPosition={[100, 20, 100]} />
         <ContactShadows opacity={0.4} width={10} height={10} blur={1} far={10} />
         <Stage environment={{ files: "venice_sunset_1k.hdr"}} center></Stage> */}
-        <Earth isXlarge={isXlarge} />
+        <Earth />
 
         <Preload all />
       </Suspense>
