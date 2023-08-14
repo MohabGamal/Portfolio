@@ -1,6 +1,6 @@
 import { useProgress } from "@react-three/drei"
 import { useEffect } from "react"
-import { useStateContext } from '../context'
+import { useStateContext } from "../context"
 
 const LoadingScreen = () => {
   const progress = useProgress()
@@ -8,16 +8,20 @@ const LoadingScreen = () => {
 
   useEffect(() => {
     document.body.classList.add("no-scroll")
-    if (progress.progress === 100) {
-      setTimeout(() => {
-        setAppLoaded(true)
-        document.body.classList.remove("no-scroll")
-      }, 100)
-    }
+    setAppLoaded(false)
+    if (progress.progress === 100)
+      if (progress.loaded === 139 || progress.loaded === 149) {
+        // hardcoded values for playground loading (not iffiecient)
+        setTimeout(() => {
+          setAppLoaded(true)
+          document.body.classList.remove("no-scroll")
+        }, 250)
+      }
     return () => {
       document.body.classList.remove("no-scroll")
     }
   }, [progress])
+  
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full z-50 transition-opacity duration-1000

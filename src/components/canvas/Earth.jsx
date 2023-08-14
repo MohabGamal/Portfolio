@@ -15,7 +15,7 @@ const Earth = ({ isXlarge }) => {
   return (
     <primitive
       object={earth.scene}
-      scale={isXlarge ? 2 : 3.2}
+      scale={isXlarge ? 2 : 3}
       position-y={0}
       rotation-y={0}
       rotation={[-0.05, -0.2, 0.4]}

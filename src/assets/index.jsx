@@ -43,8 +43,6 @@ import email from "./email.svg"
 import cv from "./cv.png"
 import externalLink from "./externalLink.svg"
 
-
-
 /* svgs */
 const DownloadFileSvg = (props) => (
   <svg
@@ -180,7 +178,7 @@ const StackoverflowSvg = (props) => (
   </svg>
 )
 
-const SmallArrowSvg = (props) => (
+const ArrowSvg = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 5" {...props}>
     <path d="M3.8 4.4c.4.3 1 .3 1.4 0L8 1.7A1 1 0 0 0 7.4 0H1.6a1 1 0 0 0-.7 1.7l3 2.7z" />
   </svg>
@@ -228,12 +226,11 @@ export {
   BookingMERN,
   aucCert,
   graduationCert,
-
   LinkedInSvg,
   FacebookSvg,
   GithubSvg,
   StackoverflowSvg,
   DownloadFileSvg,
   LoadingSvg,
-  SmallArrowSvg,
+  ArrowSvg,
 }

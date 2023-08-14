@@ -18,8 +18,10 @@ const Cursor = () => {
     outlineX = outlineX + distX * CURSOR_SPEED
     outlineY = outlineY + distY * CURSOR_SPEED
 
-    cursorOutline.current.style.left = `${outlineX}px`
-    cursorOutline.current.style.top = `${outlineY}px`
+    if (cursorOutline.current) {
+      cursorOutline.current.style.left = `${outlineX}px`
+      cursorOutline.current.style.top = `${outlineY}px`
+    }
     requestAnimationFrame(animate)
   }
 
@@ -66,23 +68,23 @@ const Cursor = () => {
     }
   }, [])
 
-    return (
-      <>
-        <div
-          className={`invisible md:visible z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform 
+  return (
+    <>
+      <div
+        className={`invisible md:visible z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform 
         pulse opacity-80 ${
           hoverButton
             ? "bg-transparent border-2 border-pinkish w-5 h-5"
             : "bg-pinkish w-3 h-3"
         }`}
-          ref={cursorOutline}
-        >
-          <span style={{ "--i": 0 }} />
-          <span style={{ "--i": 1 }} />
-          <span style={{ "--i": 2 }} />
-        </div>
-      </>
-    )
+        ref={cursorOutline}
+      >
+        <span style={{ "--i": 0 }} />
+        <span style={{ "--i": 1 }} />
+        <span style={{ "--i": 2 }} />
+      </div>
+    </>
+  )
 }
 
 export default Cursor

@@ -13,7 +13,7 @@ import {
   cv,
   githubGIF,
   facebookGIF,
-  SmallArrowSvg,
+  ArrowSvg,
 } from "../assets"
 
 const Navbar = () => {
@@ -93,13 +93,8 @@ const Navbar = () => {
               alt="logo"
               className="object-contain w-[50px] h-[38px] rounded-full shadow-md shadow-primary hover:scale-125 ease-in-out transition-all duration-300"
             ></img>
-            {/* <LogoSvg className='w-9 h-9 '/> */}
             <p className="text-white text-[20px] font-extrabold cursor-pointer ">
               Mohab Gamal
-              {/* <div
-                className="inline-block w-2 h-4 ml-1 bg-gray-300 animate-blink"
-                style={{ animation: "blink 0.5s step-end infinite alternate" }}
-              />                 */}
             </p>
           </Link>
           <ul className="flex-row hidden gap-10 list-none md:flex">
@@ -140,28 +135,34 @@ const Navbar = () => {
           />
           {/* Résumé button */}
           <div className="relative ml-2 py-2.5 px-4 rounded-xl text-white font-bold bg-pinkish hidden md:flex items-center justify-center gap-2 shadow-md shadow-primary hover:bg-[#d34570]">
-            <a 
-            href={CV_LINK}
-            target="_blank" 
-            className="pr-2 border-r-2">Résumé</a>
+            <a href={CV_LINK} target="_blank" className="pr-2 border-r-2">
+              Résumé
+            </a>
             <button onClick={() => setCvToggle(!cvToggle)}>
-              <SmallArrowSvg className={`fill-white w-[1rem] h-[1rem] transform transition-all duration-300 ease-in-out
-              ${cvToggle && 'rotate-180'}`}/> 
+              <ArrowSvg
+                className={`fill-white w-[1rem] h-[1rem] transform transition-all duration-300 ease-in-out
+              ${cvToggle && "rotate-180"}`}
+              />
             </button>
             <div
               className={`absolute right-0 top-[3.2rem] rounded-lg bg-tertiary transition-all duration-300 ease-in-out
               ${!cvToggle && "opacity-0 pointer-events-none"}`}
             >
               <a
-              href={CV_LINK}
-              target="_blank" 
-              className="flex items-center justify-between gap-5 p-2 rounded-lg cursor-pointer hover:bg-pinkish">
+                href={CV_LINK}
+                target="_blank"
+                onClick={() => setCvToggle(!cvToggle)}
+                className="flex items-center justify-between gap-5 p-2 rounded-lg cursor-pointer hover:bg-pinkish"
+              >
                 <p>Preview</p>
                 <img className="w-5 h-5" src={externalLink} />
               </a>
               <a
-              href={CV_FILE} 
-               className="flex items-center justify-center gap-5 p-2 rounded-lg cursor-pointer hover:bg-pinkish">
+                href={CV_FILE}
+                target="_blank"
+                onClick={() => setCvToggle(!cvToggle)}
+                className="flex items-center justify-center gap-5 p-2 rounded-lg cursor-pointer hover:bg-pinkish"
+              >
                 <p>Download</p>
                 <DownloadFileSvg />
               </a>
@@ -181,7 +182,7 @@ const Navbar = () => {
           />
           <div
             className={`${
-              !navToggle && "opacity-0 pointer-events-none" 
+              !navToggle && "opacity-0 pointer-events-none"
             } flex flex-col gap-3 bg-tertiary absolute top-14 right-0 mx-2 my-2 w-[130px] z-10 rounded-xl ease transform duration-300 `}
           >
             <ul className="flex flex-col items-start justify-end flex-1 list-none ">

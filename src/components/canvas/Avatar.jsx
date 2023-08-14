@@ -150,7 +150,7 @@ const PlaygroundAvatar = ({ isMobile, animation, redo }) => {
         setRotation([0, -3, 0])
       }
       if (animation === "Fliping") {
-        setPosition([0.4, -3.2, -0.9])
+        setPosition([0.3, -3.2, -0.9])
       }
       if (animation === "Crashing Screen") {
         setPosition([0.8, -3.5, -3.1])

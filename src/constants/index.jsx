@@ -432,7 +432,7 @@ const projects = [
 ]
 
 const CV_LINK = "https://www.canva.com/design/DAFqDI-q52s/cfY9b_2kOO9_FpkpDiq7Pw/view?website#1"
-const CV_FILE = "MohabGamalCV.pdf"
+const CV_FILE = "Portfolio/MohabGamalCV.pdf"
 
 const defaultAnimations = [
   "Clapping",

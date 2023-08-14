@@ -109,7 +109,7 @@ const Contact = () => {
               value={form?.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="px-6 py-4 font-medium text-white outline-none border border-none focus:border-secondary focus:ring-2 focus:ring-secondary rounded-lg  bg-tertiary placeholder:text-secondary placeholder:opacity-50"
+              className="px-6 py-4 font-medium text-white border border-none rounded-lg outline-none focus:border-secondary focus:ring-2 focus:ring-secondary bg-tertiary placeholder:text-secondary placeholder:opacity-50"
             />
           </label>
           <label className="flex flex-col">
@@ -121,7 +121,7 @@ const Contact = () => {
               value={form?.email}
               onChange={handleChange}
               placeholder="Contact me with your email."
-              className="px-6 py-4 font-medium text-white outline-none border border-none focus:border-secondary focus:ring-2 focus:ring-secondary rounded-lg bg-tertiary placeholder:text-secondary placeholder:opacity-50"
+              className="px-6 py-4 font-medium text-white border border-none rounded-lg outline-none focus:border-secondary focus:ring-2 focus:ring-secondary bg-tertiary placeholder:text-secondary placeholder:opacity-50"
             />
           </label>
           <label className="flex flex-col">
@@ -132,12 +132,12 @@ const Contact = () => {
               value={form?.message}
               onChange={handleChange}
               placeholder="send a message to my email (mohabgamal112233@gmail.com)"
-              className="px-6 py-4 font-medium text-white outline-none border border-none focus:border-secondary focus:ring-2 focus:ring-secondary rounded-lg bg-tertiary placeholder:text-secondary placeholder:opacity-50"
+              className="px-6 py-4 font-medium text-white border border-none rounded-lg outline-none focus:border-secondary focus:ring-2 focus:ring-secondary bg-tertiary placeholder:text-secondary placeholder:opacity-50"
             />
           </label>
           <button
             type="submit"
-            className={`flex items-center bg-pinkish py-3 px-8 rounded-2xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:scale-110 cursor-pointer transition-all duration-300
+            className={`flex items-center bg-pinkish py-3 px-8 rounded-lg outline-none w-fit text-white font-bold shadow-md shadow-primary hover:scale-110 cursor-pointer transition-all duration-300
               hover:bg-[#d34570] ${loading && "pointer-events-none"}`}
           >
             {loading ? (
@@ -148,7 +148,7 @@ const Contact = () => {
             ) : (
               <>
                 <p>Send</p>
-                <img src={email} className="h-6 w-6 ml-2" />
+                <img src={email} className="w-6 h-6 ml-2" />
               </>
             )}
           </button>
@@ -159,7 +159,7 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:max-w-[600px] xl:h-auto md:h-[550px] h-[350px]"
       >
-        <MoveHere className={''} />
+        <MoveHere />
         <EarthCanvas />
       </motion.div>
     </div>
