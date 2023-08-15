@@ -166,7 +166,7 @@ const IphoneCanvas = (props) => {
           controls={ref}
           autoRotate={true}
           autoRotateSpeed={3}
-          enableZoom={false}
+          enableZoom={true}
           rotateSpeed={3}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
@@ -176,7 +176,7 @@ const IphoneCanvas = (props) => {
           controls={ref}
           preset="rembrandt"
           intensity={1}
-          environment={{ files: "enviroments/kiara_1_dawn_2k.hdr" }}
+          environment={{ files: "enviroments/venice_sunset_1k.hdr" }}
           adjustCamera={false}
         ></Stage>
 

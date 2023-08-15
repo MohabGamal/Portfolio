@@ -4,23 +4,24 @@ import { OrbitControls, Preload, Stage, useGLTF } from "@react-three/drei"
 
 import CanvasLoader from "../Loader"
 
-useGLTF.preload('models/carbon_server_console/scene.gltf')
+useGLTF.preload("models/hacker_laptop/scene.gltf")
 
 const Console = () => {
-  const console = useGLTF('models/carbon_server_console/scene.gltf')
+  const consoleModel = useGLTF("models/hacker_laptop/scene.gltf")
   const ref = useRef()
 
   return (
     <primitive
       ref={ref}
-      object={console.scene}
-      scale={2.362}
-      position-y={0.4}
-      position-x={1.9}
+      object={consoleModel.scene}
+      scale={0.00066}
+      position-y={-0.7}
+      position-x={0.12}
       //   position-z={-1.5}
-      rotation-y={0}
-      //   rotation-z={0.1}
-      //   rotation={[0, 0, 0]}
+      // rotation-x={0.8}
+      rotation-y={-1.5}
+      rotation-z={-0.18}
+      // rotation={[0.3, -1.55, 0]}
     />
   )
 }
@@ -56,11 +57,12 @@ const ConsoleCanvas = (props) => {
           minPolarAngle={Math.PI / 2}
           //   minDistance={0.8} maxDistance={1}
         />
+        {/* <Sky></Sky> */}
         {/* <Stage
           controls={ref}
-          preset="soft"
-          intensity={3.04}
-          environment={{ files: "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/hdris/dikhololo/dikhololo_night_1k.hdr" }}
+          preset="rembrandt"
+          intensity={0.002}
+          environment={{ files: "enviroments/colorful_studio_1k.hdr" }}
           //   center={true}
           adjustCamera={false}
         ></Stage> */}

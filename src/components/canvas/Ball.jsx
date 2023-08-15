@@ -93,7 +93,7 @@ const BallCanvas = ({ imgUrl, backImgUrl }) => {
         <Ball imgUrl={imgUrl} backImgUrl={backImgUrl} />
       </Suspense>
 
-      <Preload all />
+      {/* <Preload all /> */}
     </Canvas>
   )
 }

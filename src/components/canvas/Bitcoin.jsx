@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, Stage, useGLTF } from "@react-three/drei"
 import CanvasLoader from "../Loader"
 
-useGLTF.preload('models/bitcoin/scene.gltf')
+// useGLTF.preload('models/bitcoin/scene.gltf')
 
 const Bitcoin = () => {
   const bitcoin = useGLTF('models/bitcoin/scene.gltf')
@@ -12,7 +12,7 @@ const Bitcoin = () => {
     <primitive
       object={bitcoin.scene}
       scale={0.062}
-      position-y={-2.7}
+      position-y={-2.2}
     />
   )
 }
@@ -42,7 +42,7 @@ const BitcoinCanvas = (props) => {
           controls={ref}
           autoRotate={true}
           autoRotateSpeed={3}
-          enableZoom={false}
+          enableZoom={true}
           rotateSpeed={3}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

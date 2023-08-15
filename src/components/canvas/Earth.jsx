@@ -8,11 +8,12 @@ import {
 
 import CanvasLoader from "../Loader"
 
-useGLTF.preload('models/planet/scene.gltf');
+// useGLTF.preload('models/planet/scene.gltf');
  
 const Earth = () => {
   const [isXlarge, setIsXlarge] = useState(false)
-
+  const earth = useGLTF('models/planet/scene.gltf')
+  
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 1280px)")
@@ -33,7 +34,6 @@ const Earth = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange)
     }
   }, [isXlarge])
-  const earth = useGLTF('models/planet/scene.gltf')
   return (
     <primitive
       object={earth.scene}
@@ -69,14 +69,14 @@ const EarthCanvas = () => {
           enableZoom={false}
           rotateSpeed={3}
           maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          minPolarAngle={0}
         />
         {/* <Sky sunPosition={[100, 20, 100]} />
         <ContactShadows opacity={0.4} width={10} height={10} blur={1} far={10} />
         <Stage environment={{ files: "venice_sunset_1k.hdr"}} center></Stage> */}
         <Earth />
 
-        <Preload all />
+        {/* <Preload all /> */}
       </Suspense>
     </Canvas>
   )

@@ -34,6 +34,7 @@ const ProjectCard = ({
           <img
             src={image}
             alt="project_image"
+            loading="lazy"
             className="object-cover w-full h-full rounded-2xl"
           />
 

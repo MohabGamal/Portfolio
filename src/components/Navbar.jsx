@@ -138,12 +138,11 @@ const Navbar = () => {
             <a href={CV_LINK} target="_blank" className="pr-2 border-r-2">
               Résumé
             </a>
-            <button onClick={() => setCvToggle(!cvToggle)}>
-              <ArrowSvg
-                className={`fill-white w-[1rem] h-[1rem] transform transition-all duration-300 ease-in-out
+            <ArrowSvg
+              className={`fill-white w-[1rem] h-[1rem] transform transition-all duration-300 ease-in-out
               ${cvToggle && "rotate-180"}`}
-              />
-            </button>
+              onClick={() => setCvToggle(!cvToggle)}
+            />
             <div
               className={`absolute right-0 top-[3.2rem] rounded-lg bg-tertiary transition-all duration-300 ease-in-out
               ${!cvToggle && "opacity-0 pointer-events-none"}`}

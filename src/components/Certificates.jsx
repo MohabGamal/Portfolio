@@ -20,7 +20,7 @@ const FeedbackCard = ({
     className="xs:w-[450px] w-full"
   >
     <Tilt scale={1.1}>
-      <img src={image} className="rounded-sm h-[333px]" />
+      <img src={image} loading="lazy" className="rounded-sm h-[333px]" />
     </Tilt>
     <div className="bg-black-200 p-4 rounded-3xl mt-[2rem] shadow-md shadow-primary flex justify-between items-center gap-1 hover:scale-110 transition-all duration-300">
       <div className="flex flex-col flex-1">

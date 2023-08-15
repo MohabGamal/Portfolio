@@ -89,7 +89,7 @@ const Avatar = ({ isMobile }) => {
     }
   }, [animation])
 
-  useFrame((state, delta) => {
+  useFrame((state) => {
     if (animation === "Waving") {
       group.current?.getObjectByName("Head").lookAt(state.camera.position)
     }
@@ -254,7 +254,7 @@ const AvatarCanvas = ({ appLoaded, animation, playgroundActive, redo }) => {
           <Computers isMobile={isMobile} />
         </Suspense>
       )}
-      {/* <Preload all /> */}
+      <Preload all />
     </Canvas>
   )
 }
