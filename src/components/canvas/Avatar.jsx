@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useState, useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
-import { useStateContext } from '../../context'
+import { useStateContext } from "../../context"
 import {
   OrbitControls,
   Preload,
@@ -13,6 +13,7 @@ import {
 import CanvasLoader from "../Loader"
 import {
   defaultAnimations,
+  isTouchScreen,
   playgroundAnimations,
   repeatedOnceAnimations,
 } from "../../constants"
@@ -22,10 +23,8 @@ useFBX.preload("models/avatar/model.fbx")
 defaultAnimations.forEach((ani) => useFBX.preload(`animations/${ani}.fbx`))
 
 const Computers = ({ isMobile }) => {
-  // const {nodes, materials} = useGLTF('models/desktop_pc/scene.gltf')
   const computer = useGLTF("models/desktop_pc/scene.gltf")
-  // const obj = useLoader(OBJLoader, './new/obj file.obj')
-  // const obj = useFBX('./new/samsung.FBX')
+
   const screenMaterials = [
     "Material.074_30",
     "Material.074_81",
@@ -112,9 +111,9 @@ const Avatar = ({ isMobile }) => {
       <mesh>
         <primitive
           object={obj}
-          scale={isMobile ? 2.1 : 7}
-          position={isMobile ? [-0.6, -2.5, -2.2] : [4.5, -11.8, -2.5]}
-          rotation={[0, -0.3, -0.01]}
+          scale={isMobile ? 2 : 6.5}
+          position={isMobile ? [0.1, -2, -2.2] : [4.5, -10.8, -2.5]}
+          rotation={isMobile ? [0.2, 0, -0.01] : [0.2, -0.4, -0.01]}
         />
       </mesh>
     </group>
@@ -150,7 +149,7 @@ const PlaygroundAvatar = ({ isMobile, animation, redo }) => {
         setRotation([0, -3, 0])
       }
       if (animation === "Fliping") {
-        setPosition([0.3, -3.2, -0.9])
+        setPosition([-0.1, -3.2, -0.9])
       }
       if (animation === "Crashing Screen") {
         setPosition([0.8, -3.5, -3.1])
@@ -196,7 +195,7 @@ const AvatarCanvas = ({ appLoaded, animation, playgroundActive, redo }) => {
 
   useEffect(() => {
     // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)")
+    const mediaQuery = window.matchMedia("(max-width: 768px)")
 
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches)
@@ -214,7 +213,7 @@ const AvatarCanvas = ({ appLoaded, animation, playgroundActive, redo }) => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange)
     }
   }, [])
-
+  
   return (
     <Canvas
       frameloop="always"
@@ -228,12 +227,14 @@ const AvatarCanvas = ({ appLoaded, animation, playgroundActive, redo }) => {
     >
       <hemisphereLight intensity={1.7} color={"white"} groundColor="black" />
       <ambientLight intensity={1.3} color={"white"} />
-      <OrbitControls
-        enableZoom={false}
-        rotateSpeed={0.4}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
+      {!isTouchScreen && (
+        <OrbitControls
+          enableZoom={false}
+          rotateSpeed={0.4}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+      )}
       <Stage
         preset="rembrandt"
         intensity={0.017}
@@ -248,10 +249,10 @@ const AvatarCanvas = ({ appLoaded, animation, playgroundActive, redo }) => {
         />
       ) : (
         <Suspense fallback={<CanvasLoader />}>
-          <group position-y={0.5} position-x={0.6}>
+          <group rotation={isTouchScreen ? [-0.26, 0, 0] : [0,0,0]}>
             <Avatar isMobile={isMobile} appLoaded={appLoaded} />
+            <Computers isMobile={isMobile} />
           </group>
-          <Computers isMobile={isMobile} />
         </Suspense>
       )}
       <Preload all />

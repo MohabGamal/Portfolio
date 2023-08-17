@@ -1,43 +1,18 @@
 import { Suspense, useState, useEffect } from "react"
 import { Canvas } from "@react-three/fiber"
-import {
-  OrbitControls,
-  Preload,
-  useGLTF,
-} from "@react-three/drei"
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 
 import CanvasLoader from "../Loader"
 
-// useGLTF.preload('models/planet/scene.gltf');
- 
+useGLTF.preload("models/planet/scene.gltf")
+
 const Earth = () => {
-  const [isXlarge, setIsXlarge] = useState(false)
-  const earth = useGLTF('models/planet/scene.gltf')
-  
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 1280px)")
+  const earth = useGLTF("models/planet/scene.gltf")
 
-    // Set the initial value of the `isMobile` state variable
-    setIsXlarge(!mediaQuery.matches)
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsXlarge(event.matches)
-    }
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange)
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange)
-    }
-  }, [isXlarge])
   return (
     <primitive
       object={earth.scene}
-      scale={isXlarge ? 2.3 : 3.2}
+      scale={2.5}
       position-y={0}
       rotation-y={0}
       rotation={[-0.05, -0.2, 0.4]}
@@ -46,7 +21,6 @@ const Earth = () => {
 }
 
 const EarthCanvas = () => {
-
   return (
     <Canvas
       shadows
@@ -76,7 +50,7 @@ const EarthCanvas = () => {
         <Stage environment={{ files: "venice_sunset_1k.hdr"}} center></Stage> */}
         <Earth />
 
-        {/* <Preload all /> */}
+        <Preload all />
       </Suspense>
     </Canvas>
   )

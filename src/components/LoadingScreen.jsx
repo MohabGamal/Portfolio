@@ -5,7 +5,8 @@ import { useStateContext } from "../context"
 const LoadingScreen = () => {
   const progress = useProgress()
   const { appLoaded, setAppLoaded } = useStateContext()
-  console.log(progress)
+  // console.log(progress)
+  
   useEffect(() => {
     document.body.classList.add("no-scroll")
     setAppLoaded(false)

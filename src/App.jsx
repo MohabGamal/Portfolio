@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom"
-import { useStateContext } from './context'
 import {
   About,
   Contact,
@@ -15,7 +14,6 @@ import {
 } from "./components"
 
 const App = () => {
-  const { appLoaded } = useStateContext()
   return (
     <>
       <LoadingScreen  />
@@ -36,7 +34,7 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
-      {appLoaded && <Cursor />}
+      <Cursor />
     </>
   )
 }

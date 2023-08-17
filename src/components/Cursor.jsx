@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react"
+import { isTouchScreen } from "../constants"
+import { useStateContext } from '../context'
 
 const CURSOR_SPEED = 0.05
 
@@ -8,6 +10,9 @@ let outlineX = 0
 let outlineY = 0
 
 const Cursor = () => {
+  const { appLoaded } = useStateContext()
+  if (isTouchScreen || !appLoaded) return null
+
   const cursorOutline = useRef()
   const [hoverButton, setHoverButton] = useState(false)
 
@@ -71,7 +76,7 @@ const Cursor = () => {
   return (
     <>
       <div
-        className={`invisible md:visible z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform 
+        className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform 
         pulse opacity-80 ${
           hoverButton
             ? "bg-transparent border-2 border-pinkish w-5 h-5"

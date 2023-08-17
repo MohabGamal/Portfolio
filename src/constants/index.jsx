@@ -433,6 +433,8 @@ const projects = [
 
 const CV_LINK = "https://www.canva.com/design/DAFqDI-q52s/cfY9b_2kOO9_FpkpDiq7Pw/view?website#1"
 const CV_FILE = "Portfolio/MohabGamalCV.pdf"
+const isTouchScreen = "ontouchstart" in window || navigator.msMaxTouchPoints
+
 
 const defaultAnimations = [
   "Clapping",
@@ -470,4 +472,5 @@ export {
   repeatedOnceAnimations,
   CV_LINK,
   CV_FILE,
+  isTouchScreen,
 }

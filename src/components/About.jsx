@@ -8,13 +8,12 @@ import MoveHere from "./MoveHere"
 
 const ServiceCard = ({ title, index, Model }) => {
   return (
-    <div className="w-full xs:w-[350px] ">
+    <div className="w-[90%] xs:w-[350px] ">
       <motion.div
         variants={fadeIn("up", "spring", 0.5 * index, 0.75)}
         className="w-full violet-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div className="bg-tertiary rounded-[20px] py-5 px-5 h-[380px] relative">
-          {/* <img src={icon} alt={title} className="object-contain w-16 h-16" /> */}
           <MoveHere/>
           <Model />
         </div>
@@ -33,8 +32,7 @@ const About = () => {
   return (
     <motion.div variants={textVariant()}>
       <h2 className={styles.sectionHeadText}>About Me.</h2>
-      <motion.div
-        variants={fadeIn("", "", 0.1, 1)}
+      <div
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] flex flex-col gap-3"
       >
         <p>
@@ -55,7 +53,7 @@ const About = () => {
           I am currently living in Cairo, Egypt, and talking Arabic natively and
           English professionally.
         </p>
-      </motion.div>
+      </div>
       <div className="flex flex-wrap justify-center gap-12 mt-20">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

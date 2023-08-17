@@ -134,7 +134,7 @@ const Navbar = () => {
             className="w-10 h-10 transition-all duration-300 bg-white rounded-full shadow-md hover:scale-125 shadow-primary"
           />
           {/* Résumé button */}
-          <div className="relative ml-2 py-2.5 px-4 rounded-xl text-white font-bold bg-pinkish hidden md:flex items-center justify-center gap-2 shadow-md shadow-primary hover:bg-[#d34570]">
+          <div className="relative ml-2 py-2.5 px-4 rounded-xl text-white font-bold bg-pinkish hidden md:flex items-center justify-center gap-2 shadow-md shadow-primary cursor-pointer hover:bg-[#d34570]">
             <a href={CV_LINK} target="_blank" className="pr-2 border-r-2">
               Résumé
             </a>
@@ -144,14 +144,14 @@ const Navbar = () => {
               onClick={() => setCvToggle(!cvToggle)}
             />
             <div
-              className={`absolute right-0 top-[3.2rem] rounded-lg bg-tertiary transition-all duration-300 ease-in-out
+              className={`absolute right-0 top-[3.2rem] rounded-lg bg-tertiary transition-all duration-300 ease-in-out 
               ${!cvToggle && "opacity-0 pointer-events-none"}`}
             >
               <a
                 href={CV_LINK}
                 target="_blank"
                 onClick={() => setCvToggle(!cvToggle)}
-                className="flex items-center justify-between gap-5 p-2 rounded-lg cursor-pointer hover:bg-pinkish"
+                className="flex items-center justify-between gap-5 p-2 rounded-lg"
               >
                 <p>Preview</p>
                 <img className="w-5 h-5" src={externalLink} />
@@ -160,7 +160,7 @@ const Navbar = () => {
                 href={CV_FILE}
                 target="_blank"
                 onClick={() => setCvToggle(!cvToggle)}
-                className="flex items-center justify-center gap-5 p-2 rounded-lg cursor-pointer hover:bg-pinkish"
+                className="flex items-center justify-center gap-5 p-2 rounded-lg"
               >
                 <p>Download</p>
                 <DownloadFileSvg />

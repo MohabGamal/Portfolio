@@ -6,34 +6,36 @@ import { playgroundAnimations, repeatedOnceAnimations } from "../constants"
 import { ArrowSvg } from "../assets"
 
 const Hero = () => {
-  const [showPlayground, setShowPlayground] = useState(true)
+  const mdMediaQuery = window.matchMedia("(max-width: 768px)")
+
+  const [showPlayground, setShowPlayground] = useState(!mdMediaQuery.matches)
   const [redo, setRedo] = useState(false)
   const [animation, setAnimation] = useState("none")
   const animations = ["none", ...playgroundAnimations]
   const playgroundActive = animation !== "none" ? true : false
-
+  
+  
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)")
-    const handleMediaQueryChange = (event) => {
+    const handleMdMediaQueryChange = (event) => {
       setShowPlayground(!event.matches)
     }
-    mediaQuery.addEventListener("change", handleMediaQueryChange)
+    mdMediaQuery.addEventListener("change", handleMdMediaQueryChange)
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange)
+      mdMediaQuery.removeEventListener("change", handleMdMediaQueryChange)
     }
   }, [showPlayground])
 
   return (
     <section className="relative w-full h-screen mx-auto">
-      {/* Playground Settings */}
+      {/* Playground Mode */}
       <div
-        className={`z-10 absolute top-[13%] right-6 rounded-2xl shadow-md shadow-primary transition-all duration-300 ease-in-out ${
+        className={`z-10 absolute top-[13%] right-8 rounded-2xl shadow-md shadow-primary transition-all duration-300 ease-in-out ${
           !showPlayground && "opacity-0 pointer-events-none"
         }`}
       >
         <div className="relative p-2 px-5 bg-black-200 rounded-t-xl">
           <h3 className="text-xl text-center text-white">
-            Playground Settings
+            Playground Mode
           </h3>
           <ArrowSvg
             className="absolute h-5 transition-all duration-300 transform -rotate-90 cursor-pointer -right-5 top-9 w-7 fill-white hover:scale-150"
@@ -79,7 +81,7 @@ const Hero = () => {
         }`}
         onClick={() => setShowPlayground(true)}
       />
-      {/* End Playground Settings */}
+      {/* End Playground Mode */}
       {!playgroundActive && (
         <div
           className={`${styles.paddingX} absolute inset-0 top-[14%] max-auto flex flex-row items-start gap-5`}
@@ -94,7 +96,7 @@ const Hero = () => {
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               I am a computer science graduate.
-              <br className="hidden sm:block" />I develop full-stack Web
+              <br className="hidden sm:block" /> I develop full-stack Web
               Applications.
             </p>
           </div>
