@@ -425,7 +425,7 @@ const projects = [
 ]
 
 const CV_LINK = "https://nileuniversity-my.sharepoint.com/:b:/g/personal/m_gamalaldeen_nu_edu_eg/EWhak2fIyj1Hsp04Y2Aax9UBH79ZztjP-7KUoarYhkEMtg?e=1q6AT2"
-const CV_FILE = "Portfolio/MohabGamalCV.pdf"
+const CV_FILE = "MohabGamalCV.pdf"
 const isTouchScreen = "ontouchstart" in window || navigator.msMaxTouchPoints
 
 
