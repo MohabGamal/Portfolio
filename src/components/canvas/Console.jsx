@@ -4,10 +4,10 @@ import { OrbitControls, Preload, Stage, useGLTF } from "@react-three/drei"
 
 import CanvasLoader from "../Loader"
 
-useGLTF.preload("models/hacker_laptop/scene.gltf")
+useGLTF.preload(import.meta.env.BASE_URL+ "/models/hacker_laptop/scene.gltf")
 
 const Console = () => {
-  const consoleModel = useGLTF("models/hacker_laptop/scene.gltf")
+  const consoleModel = useGLTF(import.meta.env.BASE_URL+ "/models/hacker_laptop/scene.gltf")
   const ref = useRef()
 
   return (

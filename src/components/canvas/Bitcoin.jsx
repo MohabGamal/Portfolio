@@ -3,10 +3,10 @@ import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, Stage, useGLTF } from "@react-three/drei"
 import CanvasLoader from "../Loader"
 
-useGLTF.preload("models/bitcoin/bitcoin.glb")
+useGLTF.preload(import.meta.env.BASE_URL+ "/models/bitcoin/bitcoin.glb")
 
 const Bitcoin = () => {
-	const bitcoin = useGLTF("models/bitcoin/bitcoin.glb")
+	const bitcoin = useGLTF(import.meta.env.BASE_URL+ "/models/bitcoin/bitcoin.glb")
 
 	return <primitive object={bitcoin.scene} scale={0.052} position-y={-2.2} />
 }
@@ -50,7 +50,7 @@ const BitcoinCanvas = (props) => {
 					controls={ref}
 					preset="rembrandt"
 					intensity={0.9}
-					environment={{ files: "enviroments/colorful_studio_1k.hdr" }}
+					environment={{ files: import.meta.env.BASE_URL+ "/enviroments/colorful_studio_1k.hdr" }}
 					adjustCamera={false}
 				></Stage>
 				{/* <Sky sunPosition={[100, 20, 100]} />

@@ -18,12 +18,12 @@ import {
 	repeatedOnceAnimations,
 } from "../../constants"
 
-useGLTF.preload("/models/desktop_pc/desktop_pc.glb")
-useFBX.preload("/models/avatar/model.fbx")
-defaultAnimations.forEach((ani) => useFBX.preload(`animations/${ani}.fbx`))
+useGLTF.preload(import.meta.env.BASE_URL+ "/models/desktop_pc/desktop_pc.glb")
+useFBX.preload(import.meta.env.BASE_URL+ "/models/avatar/model.fbx")
+defaultAnimations.forEach((ani) => useFBX.preload(`${import.meta.env.BASE_URL}/animations/${ani}.fbx`))
 
 const Computers = () => {
-	const computer = useGLTF("/models/desktop_pc/desktop_pc.glb")
+	const computer = useGLTF(import.meta.env.BASE_URL+ "/models/desktop_pc/desktop_pc.glb")
 	const { isMobile } = useStateContext()
 	return (
 		<mesh>
@@ -40,11 +40,11 @@ const Computers = () => {
 const Avatar = () => {
 	const { isAppLoaded, isMobile } = useStateContext()
 	const group = useRef()
-	const obj = useFBX("/models/avatar/model.fbx")
+	const obj = useFBX(import.meta.env.BASE_URL+ "/models/avatar/model.fbx")
 	const [animation, setAnimation] = useState("Waving")
 
 	const animations = defaultAnimations.map(
-		(ani) => useFBX(`animations/${ani}.fbx`).animations
+		(ani) => useFBX(`${import.meta.env.BASE_URL}/animations/${ani}.fbx`).animations
 	)
 	const animationClips = animations.flat()
 	animationClips.forEach((ani, i) => (ani.name = defaultAnimations[i]))
@@ -103,13 +103,13 @@ const PlaygroundAvatar = ({ animation, redo }) => {
 	const defaultRotation = [0, 0, 0]
 
 	const group = useRef()
-	const obj = useFBX("models/avatar/model.fbx")
+	const obj = useFBX(import.meta.env.BASE_URL+ "/models/avatar/model.fbx")
 	const [position, setPosition] = useState(defaultPosition)
 	const [rotation, setRotation] = useState(defaultRotation)
 	const { isMobile } = useStateContext()
 
 	const animations = playgroundAnimations.map(
-		(ani) => useFBX(`animations/playground/${ani}.fbx`).animations
+		(ani) => useFBX(`${import.meta.env.BASE_URL}/animations/${ani}.fbx`).animations
 	)
 	const animationClips = animations.flat()
 	animationClips.forEach((ani, i) => (ani.name = playgroundAnimations[i]))
@@ -195,7 +195,7 @@ const AvatarCanvas = ({ isAppLoaded, animation, playgroundActive, redo }) => {
 			<Stage
 				preset="rembrandt"
 				intensity={0.1}
-				environment={{ files: "enviroments/colorful_studio_1k.hdr" }}
+				environment={{ files: import.meta.env.BASE_URL+ "/enviroments/colorful_studio_1k.hdr" }}
 				adjustCamera={false}
 				environmentIntensity={0.1}
 			></Stage>

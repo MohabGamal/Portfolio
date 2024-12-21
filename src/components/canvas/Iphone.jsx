@@ -4,10 +4,12 @@ import { OrbitControls, Preload, Stage, useGLTF } from "@react-three/drei"
 
 import CanvasLoader from "../Loader"
 
-useGLTF.preload("models/iphone/model.gltf")
+useGLTF.preload(import.meta.env.BASE_URL + "/models/iphone/model.gltf")
 
 const Iphone = () => {
-	const { nodes, materials } = useGLTF("models/iphone/model.gltf")
+	const { nodes, materials } = useGLTF(
+		import.meta.env.BASE_URL + "/models/iphone/model.gltf"
+	)
 	const group = useRef()
 	return (
 		<group ref={group} dispose={null}>
@@ -176,7 +178,7 @@ const IphoneCanvas = (props) => {
 					controls={ref}
 					preset="rembrandt"
 					intensity={1}
-					environment={{ files: "enviroments/colorful_studio_1k.hdr" }}
+					environment={{ files: import.meta.env.BASE_URL+ "/enviroments/colorful_studio_1k.hdr" }}
 					adjustCamera={false}
 				></Stage>
 
