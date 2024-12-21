@@ -2,7 +2,7 @@
 
 🔗Link: https://mohabgamal.github.io/Portfolio/
 
-![3D Portfolio](https://github.com/MohabGamal/Portfolio/blob/main/src/assets/Portfolio.png)
+![3D Portfolio](https://github.com/MohabGamal/Portfolio/blob/main/public/Portfolio.webp)
 
 ## `Technologies Used:`
 

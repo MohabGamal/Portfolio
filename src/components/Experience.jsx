@@ -27,7 +27,8 @@ const ExperienceCard = ({ experience }) => {
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className={`object-contain ${experience.iconSize || 'w-[70%] h-[70%]'}
+            loading="lazy"
+            className={`object-contain ${experience.iconSize || 'w-[79%] h-[79%]'}
             hover:scale-110 transition-all duration-300`}
           />
         </div>

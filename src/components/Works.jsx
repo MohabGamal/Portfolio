@@ -18,7 +18,7 @@ const ProjectCard = ({
   website_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.8, 0.75)}>
       <Tilt
         perspective={800}
         transitionSpeed={1500}
@@ -28,13 +28,12 @@ const ProjectCard = ({
         glareMaxOpacity={0.1}
         glareColor="#ffffff"
         glareBorderRadius="20px"
-        className="bg-tertiary p-5 rounded-2xl sm:w-[380px] flex flex-col   gap-2"
+        className=" bg-tertiary p-5 rounded-2xl sm:w-[380px] sm:h-[450px] flex flex-col justify-between gap-2 "
       >
         <div className="relative w-full h-[230px]">
           <img
             src={image}
             alt="project_image"
-            loading="lazy"
             className="object-cover w-full h-full rounded-2xl"
           />
 
@@ -67,12 +66,12 @@ const ProjectCard = ({
         </div>
 
           <h3 className="text-white font-bold text-[20px]">{name}</h3>
-          <p className=" text-secondary text-[14px]">{description}</p>
+          <p className=" text-secondary text-[15px]">{description}</p>
         <div className="flex flex-wrap gap-1 ">
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[13px] ${tag.color}`}
+              className={`text-[15px] ${tag.color}`}
             >
               #{tag.name}
             </p>

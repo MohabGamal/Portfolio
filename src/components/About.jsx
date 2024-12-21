@@ -37,10 +37,10 @@ const About = () => {
       >
         <p>
           I'm a skilled software developer with experience in TypeScript and
-          JavaScript, and expertise in tools like Node.js, express.js, and
+          JavaScript also, have expertise in tools like Node.js, express.js, and
           React.
-          I am passionate about Fintech, Blockchain, and AI. I am highly
-          concerned about performance.
+          I am passionate about Fintech, Blockchain, and Webscraping. I am highly
+          concerned about performance optimization.
         </p>
         
         <p>

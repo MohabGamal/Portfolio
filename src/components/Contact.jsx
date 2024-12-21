@@ -85,12 +85,12 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse items-center justify-between gap-5 overflow-hidden`}
+      className={`xl:mt-12 flex lg:flex-row flex-col-reverse items-center justify-between gap-5 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         style={{userSelect: 'none'}}
-        className="w-full  xl:w-[50%] p-8 bg-black-100 rounded-2xl"
+        className="w-full lg:w-[50%] p-8 bg-black-100 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -157,7 +157,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="w-[75%] xl:w-[50%] xl:h-screen  h-[350px]"
+        className="w-[75%] lg:w-[50%] lg:h-screen h-[370px]"
       >
         <MoveHere />
         <EarthCanvas />

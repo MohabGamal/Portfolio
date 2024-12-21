@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react"
 import { useAnimation, motion } from "framer-motion"
-import { isTouchScreen } from "../constants"
 
 const MoveHere = ({ className }) => {
-  if (isTouchScreen) return null
   const [stopped, setStopped] = useState(false)
   const controls = useAnimation()
 

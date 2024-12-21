@@ -1,9 +1,17 @@
-import { motion } from "framer-motion"
-import { styles } from "../styles"
-import { AvatarCanvas } from "./canvas"
-import { useEffect, useState } from "react"
-import { playgroundAnimations, repeatedOnceAnimations } from "../constants"
-import { ArrowSvg } from "../assets"
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import { motion } from 'framer-motion';
+
+import { ArrowSvg } from '../assets';
+import {
+  playgroundAnimations,
+  repeatedOnceAnimations,
+} from '../constants';
+import { styles } from '../styles';
+import { AvatarCanvas } from './canvas';
 
 const Hero = () => {
   const mdMediaQuery = window.matchMedia("(max-width: 768px)")
@@ -13,7 +21,6 @@ const Hero = () => {
   const [animation, setAnimation] = useState("none")
   const animations = ["none", ...playgroundAnimations]
   const playgroundActive = animation !== "none" ? true : false
-  
   
   useEffect(() => {
     const handleMdMediaQueryChange = (event) => {
@@ -38,7 +45,7 @@ const Hero = () => {
             Playground Mode
           </h3>
           <ArrowSvg
-            className="absolute h-5 transition-all duration-300 transform -rotate-90 cursor-pointer -right-5 top-9 w-7 fill-white hover:scale-150"
+            className="absolute h-5 transition-all duration-300 transform -rotate-90 cursor-pointer -right-5 top-9 w-7 fill-white hover:scale-150 hover:fill-pinkish"
             onClick={() => setShowPlayground(false)}
           />
         </div>

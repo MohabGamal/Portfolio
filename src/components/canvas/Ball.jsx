@@ -11,12 +11,7 @@ import CanvasLoader from "../Loader"
 import { DoubleSide } from "three"
 import { technologies } from "../../constants"
 
-technologies.forEach((t) => {
-  useTexture.preload(t.icon)
-  if (t.pairTechnologyIcon) {
-    useTexture.preload(t.pairTechnologyIcon)
-  }
-})
+
 
 const Ball = ({ imgUrl, backImgUrl }) => {
   const [decal] = useTexture([imgUrl])
@@ -73,6 +68,12 @@ const Ball = ({ imgUrl, backImgUrl }) => {
 }
 
 const BallCanvas = ({ imgUrl, backImgUrl }) => {
+  technologies.forEach((t) => {
+    useTexture.preload(t.icon)
+    if (t.pairTechnologyIcon) {
+      useTexture.preload(t.pairTechnologyIcon)
+    }
+  })
   return (
     <Canvas
       frameloop="always"

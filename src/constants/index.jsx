@@ -1,33 +1,27 @@
 import {
   javascript,
   typescript,
-  html,
   css,
   reactjs,
   hardhat,
   tailwind,
   nodejs,
   mongodb,
-  git,
   solidity,
   docker,
-  meta,
+  armedForces,
   nuItCs,
   NU,
   AUC,
   Supply,
   nestRealtor,
   Portfolio,
-  githubActions,
   jest,
   express,
   aws,
   LinkedInSvg,
-  FacebookSvg,
-  GithubSvg,
   StackoverflowSvg,
   next,
-  socketIo,
   nest,
   mongoose,
   postgres,
@@ -205,7 +199,7 @@ const experiences = [
     iconBg: "#383E56",
     date: "September 2019 - July 2023",
     points: [
-      "GPA: 3.68/4",
+      "GPA: 3.7/4",
       "Courses: English, Math, Phsyics, Data Structures, Algorithms, Computer Theory, Operating Systems, Computer Architecture, Computer Networks, Database Systems, Software Engineering, Artificial Intelligence, Computer Vision, 3D Graphics, and more.",
       "Graduation Project: Blockchain-based Crowdfunding Platform",
       "Projects: PageRank algorithm, command line app in C, C++ OOP projects, physical 7 Segment LED, stroke prediction & data analysis, Django E-commerce Website, MIPS multi-cycle-processor using Verilog & Assembly, moving LMS to cloud project management, Unix OS virtual memory mangement in C, coverting regex to NFA/DFA, open-cv Sudoku scanner, detecting IOT malicious trrafic using Machine Learning, creating LL1 compiler, Resnet facial emotion recognition, CNN live drowsiness detection, 3D solar system, Egypt population prediction using Verhulst Model, MySQL hospital management system, and more.",
@@ -225,19 +219,18 @@ const experiences = [
       "Created transactions, wallets, and public/private keys",
     ],
   },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
+  {
+    title: "Full stack Developer",
+    company_name: "Ministry of Defence",
+    icon: armedForces,
+    iconBg: "#E6DEDD",
+    date: "Dec 2023 - Nov 2024",
+    points: [
+      "Contributed to developing Web apps on the Military Network.",
+      "Maintained 3 server apps that serve highly secretive & sensitive data.",
+      "Contributed to 4 React.js & CSS frontend projects.",
+    ],
+  },
 ]
 
 const certificates = [
@@ -352,7 +345,7 @@ const projects = [
       },
     ],
     image: Portfolio,
-    source_code_link: "https://github.com/MohabGamal/",
+    source_code_link: "https://github.com/MohabGamal/Portfolio",
   },
   {
     name: "Booking.com Clone & Admin Dashboard",
@@ -431,7 +424,7 @@ const projects = [
   },
 ]
 
-const CV_LINK = "https://www.canva.com/design/DAFqDI-q52s/cfY9b_2kOO9_FpkpDiq7Pw/view?website#1"
+const CV_LINK = "https://nileuniversity-my.sharepoint.com/:b:/g/personal/m_gamalaldeen_nu_edu_eg/EWhak2fIyj1Hsp04Y2Aax9UBH79ZztjP-7KUoarYhkEMtg?e=1q6AT2"
 const CV_FILE = "Portfolio/MohabGamalCV.pdf"
 const isTouchScreen = "ontouchstart" in window || navigator.msMaxTouchPoints
 

@@ -42,7 +42,14 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
+.explosion-bg{
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), 
+    url('assets/suspense.webp');
+  background-blend-mode: multiply; /* Options: multiply, overlay, screen, etc. */
+  background-size: cover;
+  background-position: center;
+}
 
 .violet-gradient {
   background: #804dee;

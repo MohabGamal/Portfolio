@@ -5,7 +5,7 @@ import close from "./close.svg"
 
 import css from "./tech/css.png"
 import docker from "./tech/docker.png"
-import express from "./tech/express.png"
+import express from "./tech/express.webp"
 import git from "./tech/git.png"
 import html from "./tech/html.png"
 import javascript from "./tech/javascript.png"
@@ -16,29 +16,29 @@ import hardhat from "./tech/hardhat.png"
 import tailwind from "./tech/tailwind.png"
 import typescript from "./tech/typescript-flipped.png"
 import solidity from "./tech/solidity.svg"
-import jest from "./tech/jest.png"
-import githubActions from "./tech/github_actions.png"
-import aws from "./tech/aws.png"
+import jest from "./tech/jest.webp"
+import githubActions from "./tech/github_actions.webp"
+import aws from "./tech/aws.webp"
 import next from "./tech/next-flipped.png"
-import socketIo from "./tech/socket-io.png"
+import socketIo from "./tech/socket-io.webp"
 import nest from "./tech/nestjs.svg"
 import mongoose from "./tech/mongoose.png"
 import postgres from "./tech/postgres.svg"
 import prisma from "./tech/prisma.svg"
 import githubGIF from "./github-animation.json"
 import facebookGIF from "./facebook-animation.json"
-import BookingMERN from "./BookingMERN.png"
+import BookingMERN from "./BookingMERN.webp"
 
-import meta from "./company/meta.png"
+import armedForces from "./company/armedForces.png"
 import AUC from "./company/AUC.ico"
 import nuItCs from "./company/NU ITCS.png"
 import NU from "./company/NU.ico"
-import nestRealtor from "./nestRealtor.png"
-import aucCert from "./AUC B2 cert.png"
-import graduationCert from "./graduationCert.png"
+import nestRealtor from "./nestRealtor.webp"
+import aucCert from "./AUC B1 Cert.webp"
+import graduationCert from "./graduationCert.webp"
 
-import Supply from "./Supply.png"
-import Portfolio from "./Portfolio.png"
+import Supply from "./Supply.webp"
+import Portfolio from "/Portfolio.webp"
 import email from "./email.svg"
 import cv from "./cv.png"
 import externalLink from "./externalLink.svg"
@@ -199,7 +199,7 @@ export {
   reactjs,
   tailwind,
   typescript,
-  meta,
+  armedForces,
   AUC,
   nuItCs,
   NU,
