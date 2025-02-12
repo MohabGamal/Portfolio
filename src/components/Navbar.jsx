@@ -71,7 +71,7 @@ const Navbar = () => {
 		<nav
 			className={`${
 				styles.paddingX
-			} w-full flex items-center pt-2 pb-1 fixed top-0 z-20 bg-tertiary duration-200 ease-in-out transition-all
+			} w-full flex items-center text-xl py-3 fixed top-0 z-20 bg-tertiary duration-200 ease-in-out transition-all
        ${topOfPage && "sm:bg-opacity-0"}`}
 		>
 			<motion.div
@@ -94,7 +94,7 @@ const Navbar = () => {
 							alt="logo"
 							className="object-contain w-[50px] h-[38px] rounded-full shadow-md shadow-primary hover:scale-125 ease-in-out transition-all duration-300"
 						></img>
-						<p className="text-white text-[20px] font-extrabold cursor-pointer ">
+						<p className="text-white font-extrabold cursor-pointer ">
 							Mohab Gamal
 						</p>
 					</Link>
@@ -104,7 +104,7 @@ const Navbar = () => {
 								key={link.id}
 								className={`${
 									active === link.title ? "text-white" : "text-secondary"
-								} hover:text-pinkish text-[18px] font-medium group cursor-pointer`}
+								} hover:text-pinkish font-medium group cursor-pointer`}
 								onClick={() => setActive(link.title)}
 							>
 								<a href={`#${link.id}`}>{link.title}</a>
@@ -135,10 +135,10 @@ const Navbar = () => {
 						className="w-10 h-10 transition-all duration-300 bg-white rounded-full shadow-md hover:scale-125 shadow-primary"
 					/>
 					{/* Résumé button */}
-					<div className="relative pr-1.5 ml-2 rounded-xl text-white font-bold bg-pinkish hidden md:flex items-center justify-center gap-2 shadow-md shadow-primary cursor-pointer ">
+					<div className="relative px-1.5 py-0.5 ml-2 rounded-xl text-white font-bold bg-pinkish hidden md:flex items-center justify-center gap-2 shadow-md shadow-primary cursor-pointer ">
 						<button className="p-2 hover:bg-[#d34570] border-r-2 rounded-l-md transition-all duration-100" onClick={() => setIsCvOpen(true)}>Résumé</button>
 						<ArrowSvg
-							className={`fill-white w-[1rem] h-[1rem] hover:scale-125 hover:bg-[#d34570] transform transition-all duration-300 ease-in-out
+							className={`fill-white w-[1.5rem] h-[1.5rem] hover:scale-125 hover:bg-[#d34570] transform transition-all duration-300 ease-in-out
               ${cvToggle && "rotate-180"}`}
 							onClick={() => setCvToggle(!cvToggle)}
 						/>

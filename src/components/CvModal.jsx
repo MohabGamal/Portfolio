@@ -36,7 +36,7 @@ export default function CvModal() {
 						{/* Close Button */}
 						<button
 							onClick={() => setIsCvOpen(false)}
-							className="absolute top-2 right-5 bg-pinkish text-white px-2 py-1 rounded-xl hover:bg-[#d34570]"
+							className="absolute top-3 right-5 bg-pinkish text-white px-2 py-1 rounded-xl hover:bg-[#d34570]"
 						>
 							Close
 						</button>

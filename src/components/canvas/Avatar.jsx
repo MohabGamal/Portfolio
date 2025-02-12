@@ -109,7 +109,7 @@ const PlaygroundAvatar = ({ animation, redo }) => {
 	const { isMobile } = useStateContext()
 
 	const animations = playgroundAnimations.map(
-		(ani) => useFBX(`${import.meta.env.BASE_URL}/animations/${ani}.fbx`).animations
+		(ani) => useFBX(`${import.meta.env.BASE_URL}/animations/playground/${ani}.fbx`).animations
 	)
 	const animationClips = animations.flat()
 	animationClips.forEach((ani, i) => (ani.name = playgroundAnimations[i]))
@@ -128,7 +128,7 @@ const PlaygroundAvatar = ({ animation, redo }) => {
 				setRotation([0, -3, 0])
 			}
 			if (animation === "Fliping") {
-				setPosition([-0.1, -3.2, -0.9])
+				setPosition([0.5, -3.2, -0.9])
 			}
 			if (animation === "Crashing Screen") {
 				setPosition([0.8, -3.5, -3.1])
@@ -182,8 +182,7 @@ const AvatarCanvas = ({ isAppLoaded, animation, playgroundActive, redo }) => {
 			onMouseEnter={(e) => (e.target.style.cursor = "grab")}
 		>
 			<hemisphereLight intensity={1.9} color={"purple"} groundColor="black" />
-			<ambientLight intensity={2.0} color={"white"} />
-			{/* <directionalLight intensity={2.3} color={"white"} position={[-1, 5, 2]} /> */}
+			<ambientLight intensity={2.5} color={"white"} />
 			{!isTouchScreen && (
 				<OrbitControls
 					enableZoom={false}

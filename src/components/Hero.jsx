@@ -41,15 +41,15 @@ const Hero = () => {
         }`}
       >
         <div className="relative p-2 px-5 bg-black-200 rounded-t-xl">
-          <h3 className="text-xl text-center text-white">
+          <h3 className="text-2xl text-center text-white">
             Playground Mode
           </h3>
           <ArrowSvg
-            className="absolute h-5 transition-all duration-300 transform -rotate-90 cursor-pointer -right-5 top-9 w-7 fill-white hover:scale-150 hover:fill-pinkish"
+            className="absolute w-[2rem] h-[2rem] transition-all duration-300 transform -rotate-90 cursor-pointer -right-6 top-9 fill-white hover:scale-150 hover:fill-pinkish"
             onClick={() => setShowPlayground(false)}
           />
         </div>
-        <div className="flex items-center gap-2 p-3 pt-4 -mt-2 text-white bg-tertiary rounded-b-xl">
+        <div className="text-xl flex items-center gap-2 p-3 pt-4 -mt-2 text-white bg-tertiary rounded-b-xl">
           <p className="">Animation</p>
           <div className="relative flex items-center justify-between w-full gap-1 px-1 rounded-md bg-black-200">
             <select
@@ -63,7 +63,7 @@ const Hero = () => {
               ))}
             </select>
             <p>{animation}</p>
-            <ArrowSvg className="fill-white w-[0.8rem] h-[0.8rem]" />
+            <ArrowSvg className="fill-white w-[1.5rem] h-[1.5rem]" />
           </div>
           {repeatedOnceAnimations.includes(animation) && (
             <svg
@@ -83,7 +83,7 @@ const Hero = () => {
         </div>
       </div>
       <ArrowSvg
-        className={`w-10 h-10 z-10 absolute top-[18%] -right-2 fill-white hover:fill-pinkish transform rotate-90 cursor-pointer transition-all duration-300 ${
+        className={`w-[2.9rem] h-[2.9rem] z-10 absolute top-[18%] -right-2 fill-white hover:fill-pinkish transform rotate-90 cursor-pointer transition-all duration-300 ${
           showPlayground && "opacity-0 pointer-events-none"
         }`}
         onClick={() => setShowPlayground(true)}
