@@ -6,14 +6,13 @@ import { styles } from "../styles"
 import { CV_FILE, CV_LINK, navLinks, socialLinks } from "../constants"
 import {
 	logo,
-	menu,
-	close,
 	DownloadFileSvg,
 	externalLink,
 	cv,
 	githubGIF,
 	facebookGIF,
 	ArrowSvg,
+	MenuSvg,
 } from "../assets"
 import { useStateContext } from "../context"
 
@@ -135,8 +134,13 @@ const Navbar = () => {
 						className="w-10 h-10 transition-all duration-300 bg-white rounded-full shadow-md hover:scale-125 shadow-primary"
 					/>
 					{/* Résumé button */}
-					<div className="relative px-1.5 py-0.5 ml-2 rounded-xl text-white font-bold bg-pinkish hidden md:flex items-center justify-center gap-2 shadow-md shadow-primary cursor-pointer ">
-						<button className="p-2 hover:bg-[#d34570] border-r-2 rounded-l-md transition-all duration-100" onClick={() => setIsCvOpen(true)}>Résumé</button>
+					<div className="relative px-1.5 ml-2 rounded-xl text-white font-bold bg-pinkish hidden md:flex items-center justify-center gap-2 shadow-md shadow-primary cursor-pointer ">
+						<button
+							className="p-2 hover:bg-[#d34570] border-r-2 rounded-l-md transition-all duration-100"
+							onClick={() => setIsCvOpen(true)}
+						>
+							Résumé
+						</button>
 						<ArrowSvg
 							className={`fill-white w-[1.5rem] h-[1.5rem] hover:scale-125 hover:bg-[#d34570] transform transition-all duration-300 ease-in-out
               ${cvToggle && "rotate-180"}`}
@@ -147,8 +151,8 @@ const Navbar = () => {
               ${!cvToggle && "opacity-0 pointer-events-none"}`}
 						>
 							<a
-                href={CV_LINK}
-                target="_blank"
+								href={CV_LINK}
+								target="_blank"
 								onClick={() => setCvToggle(!cvToggle)}
 								className="flex items-center justify-between gap-10 p-2 rounded-lg hover:bg-[#d34570]"
 							>
@@ -170,14 +174,14 @@ const Navbar = () => {
 				</div>
 				{/* small screens menu */}
 				<div className="flex items-center justify-between md:hidden">
-					<img
-						src={navToggle ? close : menu}
-						alt="menu"
-						className={`w-[28px] h-[28px] object-contain transition ease transform duration-300 hover:scale-125 cursor-pointer ${
-							navToggle && "-rotate-90"
-						}`}
-						onClick={() => setNavToggle(!navToggle)}
-					/>
+					<label className="hamburger cursor-pointer">
+						<input
+							className="hamburger-input"
+							type="checkbox"
+							onClick={() => setNavToggle(!navToggle)}
+						/>
+						<MenuSvg />
+					</label>
 					<div
 						className={`${
 							!navToggle && "opacity-0 pointer-events-none"

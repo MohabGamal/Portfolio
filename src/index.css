@@ -20,33 +20,25 @@
 }
 
 
-/* .scrollbar-thumb-pinkish {
-  --scrollbar-thumb: white !important;
-} */
-
-/* .scrollbar-track-primary {
-  --scrollbar-track: white !important;
-} */
-
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
+  background: #000000; 
   background: -webkit-linear-gradient(
     to right,
     #434343,
     #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #434343,
     #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 }
 
 .explosion-bg{
   background: 
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), 
     url('assets/suspense.webp');
-  background-blend-mode: multiply; /* Options: multiply, overlay, screen, etc. */
+  background-blend-mode: multiply; 
   background-size: cover;
   background-position: center;
 }
@@ -68,17 +60,17 @@
 }
 
 .framer-motion-text-gradient {
-  background: #ff008c; /* fallback for old browsers */
+  background: #ff008c; 
   background: -webkit-linear-gradient(
     to top,
     #ff008c,
     #7928ca
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #ff008c,
     #7928ca
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -119,116 +111,116 @@
 
 
 .green-text-gradient {
-  background: #11998e; /* fallback for old browsers */
+  background: #11998e; 
   background: -webkit-linear-gradient(
     to top,
     #11998e,
     #38ef7d
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #11998e,
     #38ef7d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .red-text-gradient {
-  background: #b50000; /* fallback for old browsers */
+  background: #b50000; 
   background: -webkit-linear-gradient(
     to top,
     #b50000,
     #f64747
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #b50000,
     #f64747
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .yellow-text-gradient {
-  background: #f6c90e; /* fallback for old browsers */
+  background: #f6c90e; 
   background: -webkit-linear-gradient(
     to top,
     #f6c90e,
     #f9f871
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #f6c90e,
     #f9f871
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .black-gray-text-gradient {
-  background: #888888; /* fallback for old browsers */
+  background: #888888; 
   background: -webkit-linear-gradient(
     to top,
     #888888,
     #ffffff,
     #cccccc
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #888888,
     #ffffff,
     #cccccc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .aws-orange-text-gradient {
-  background: #ff9900; /* fallback for old browsers */
+  background: #ff9900; 
   background: -webkit-linear-gradient(
     to top,
     #ff9900,
     #ffcc66
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #ff9900,
     #ffcc66
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .tailwind-blue-text-gradient {
-  background: #4299e1; /* fallback for old browsers */
+  background: #4299e1; 
   background: -webkit-linear-gradient(
     to top,
     #4299e1,
     #a5b4fc
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #4299e1,
     #a5b4fc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 
 .white-gray-text-gradient {
-  background: #ffffff; /* fallback for old browsers */
+  background: #ffffff; 
   background: -webkit-linear-gradient(
     to top,
     #ffffff,
     #cccccc
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #ffffff,
     #cccccc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -236,34 +228,33 @@
 
 
 .blue-text-gradient {
-  /* background: -webkit-linear-gradient(#eee, #333); */
-  background: #56ccf2; /* fallback for old browsers */
+  background: #56ccf2; 
   background: -webkit-linear-gradient(
     to top,
     #2f80ed,
     #56ccf2
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #2f80ed,
     #56ccf2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .pink-text-gradient {
-  background: #ec008c; /* fallback for old browsers */
+  background: #ec008c; 
   background: -webkit-linear-gradient(
     to top,
     #ec008c,
     #fc6767
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #ec008c,
     #fc6767
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -385,5 +376,39 @@
   }
 }
 
+
+.hamburger-input {
+  display: none;
+}
+
+.hamburger-svg{
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger-line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger-input:checked + .hamburger-svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger-input:checked + .hamburger-svg .hamburger-line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
 
 
