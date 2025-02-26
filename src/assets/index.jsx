@@ -196,8 +196,6 @@ const MenuSvg = (props) => (
 export {
 	logo,
 	github,
-	menu,
-	close,
 	css,
 	docker,
 	git,
