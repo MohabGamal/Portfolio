@@ -9,7 +9,6 @@ import {
   mongodb,
   solidity,
   docker,
-  armedForces,
   nuItCs,
   NU,
   AUC,
@@ -29,6 +28,12 @@ import {
   BookingMERN,
   aucCert,
   graduationCert,
+  cloud11,
+  cloudzlab,
+  xperience1st,
+  salesforceDev1,
+  salesforceLogo,
+  trailheadLogo,
 } from "../assets"
 import {
   BitcoinCanvas,
@@ -100,25 +105,23 @@ const technologies = [
   //   active: true,
   // },
   {
+    name: "Salesforce & Trailhead",
+    active: true,
+    icon: salesforceLogo,
+    pairTechnologyIcon: trailheadLogo,
+  },
+  {
     name: "CSS & Tailwind",
     active: true,
     icon: css,
     pairTechnologyIcon: tailwind,
   },
-  // {
-  //   name: "Tailwind CSS",
-  //   icon: tailwind,
-  // },
   {
     name: "JS & TS",
     active: true,
     icon: javascript,
     pairTechnologyIcon: typescript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
   {
     name: "React & Next",
     active: true,
@@ -137,11 +140,11 @@ const technologies = [
     icon: mongodb,
     pairTechnologyIcon: mongoose,
   },
-  {
-    name: "Nest JS",
-    active: true,
-    icon: nest,
-  },
+  // {
+  //   name: "Nest JS",
+  //   active: true,
+  //   icon: nest,
+  // },
   {
     name: "Postgres & Prisma",
     active: true,
@@ -180,29 +183,44 @@ const technologies = [
 
 const experiences = [
   {
-    title: "English Courses",
-    company_name:
-      "American University in Cairo (Schoool of Continuing Education)",
-    icon: AUC,
+    title: "Salesforce Developer & Consultant",
+    company_name: "Cloud11",
+    icon: cloud11,
     iconBg: "#E6DEDD",
-    date: "Jan 2017 - March 2019",
+    date: "March 2026 - Now",
     points: [
-      "Learned professional skills such as Academic Writing, and Presentation Skills",
-      "Collaborated with teams and foreigners to complete activities",
-      "Held conversations in formal and casual settings",
+      "Manage and develop the Salesforce platform, including users, permissions, and data integrity",
+      "Integrate Salesforce seamlessly with other systems and applications using APIs",
+      "Create reports and dashboards, delivering insights to support decision-making"
     ],
   },
   {
-    title: "Computer Science Bachelor",
-    company_name: "Nile University ",
-    icon: NU,
-    iconBg: "#383E56",
-    date: "September 2019 - July 2023",
+    title: "Salesforce Developer",
+    company_name: "Cloudzlab",
+    icon: cloudzlab,
+    iconBg: "#E6DEDD",
+    iconSize: "w-[95%] h-[100%]",
+    date: "June 2025 - March 2026",
     points: [
-      "GPA: 3.7/4",
-      "Courses: English, Math, Phsyics, Data Structures, Algorithms, Computer Theory, Operating Systems, Computer Architecture, Computer Networks, Database Systems, Software Engineering, Artificial Intelligence, Computer Vision, 3D Graphics, and more.",
-      "Graduation Project: Blockchain-based Crowdfunding Platform",
-      "Projects: PageRank algorithm, command line app in C, C++ OOP projects, physical 7 Segment LED, stroke prediction & data analysis, Django E-commerce Website, MIPS multi-cycle-processor using Verilog & Assembly, moving LMS to cloud project management, Unix OS virtual memory mangement in C, coverting regex to NFA/DFA, open-cv Sudoku scanner, detecting IOT malicious trrafic using Machine Learning, creating LL1 compiler, Resnet facial emotion recognition, CNN live drowsiness detection, 3D solar system, Egypt population prediction using Verhulst Model, MySQL hospital management system, and more.",
+      "Developed Frontend applications using Web Components & JavaScript",
+      "Using Apex Programming language, I developed backend applications",
+      "By applying Test-Driven-Development (TDD), I achieved at least 75% code coverage",
+      "Collaborated closely with business concepts such as CPQ, pricing models, and product configuration",
+    ],
+  },
+  {
+    title: "Salesforce Developer Intern",
+    company_name: "Xperience 1st",
+    icon: xperience1st,
+    iconBg: "#E6DEDD",
+    iconSize: "w-[100%] h-[100%]",
+    date: "Feb 2025 - May 2025",
+    points: [
+      "Developed Frontend applications using Web Components & JavaScript",
+      "Using Apex Programming language, I developed backend applications  ",
+      "By applying Test-Driven-Development (TDD), I achieved at least 75% code coverage ",
+      "Collaborated closely with business concepts such as CPQ, pricing models, and product configuration ",
+
     ],
   },
   {
@@ -220,40 +238,54 @@ const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Ministry of Defence",
-    icon: armedForces,
-    iconBg: "#E6DEDD",
-    date: "Dec 2023 - Nov 2024",
+    title: "Computer Science Bachelor",
+    company_name: "Nile University ",
+    icon: NU,
+    iconBg: "#383E56",
+    date: "September 2019 - July 2023",
     points: [
-      "Contributed to developing Web apps on the Military Network.",
-      "Maintained 3 server apps that serve highly secretive & sensitive data.",
-      "Contributed to 4 React.js & CSS frontend projects.",
+      "GPA: 3.7/4",
+      "Courses: English, Math, Phsyics, Data Structures, Algorithms, Computer Theory, Operating Systems, Computer Architecture, Computer Networks, Database Systems, Software Engineering, Artificial Intelligence, Computer Vision, 3D Graphics, and more.",
+      "Graduation Project: Blockchain-based Crowdfunding Platform",
+      "Projects: PageRank algorithm, command line app in C, C++ OOP projects, physical 7 Segment LED, stroke prediction & data analysis, Django E-commerce Website, MIPS multi-cycle-processor using Verilog & Assembly, moving LMS to cloud project management, Unix OS virtual memory mangement in C, coverting regex to NFA/DFA, open-cv Sudoku scanner, detecting IOT malicious trrafic using Machine Learning, creating LL1 compiler, Resnet facial emotion recognition, CNN live drowsiness detection, 3D solar system, Egypt population prediction using Verhulst Model, MySQL hospital management system, and more.",
+    ],
+  },
+  {
+    title: "English Courses",
+    company_name:
+      "American University in Cairo (Schoool of Continuing Education)",
+    icon: AUC,
+    iconBg: "#E6DEDD",
+    date: "Jan 2017 - March 2019",
+    points: [
+      "Learned professional skills such as Academic Writing, and Presentation Skills",
+      "Collaborated with teams and foreigners to complete activities",
+      "Held conversations in formal and casual settings",
     ],
   },
 ]
 
 const certificates = [
   {
-    image: aucCert,
-    name: "Alia Shoeib",
-    position: "Dean of the School of Continuing Education",
-    logo: AUC,
-    logoBg: "#E6DEDD",
+    image: salesforceDev1,
+    name: "Salesforce",
+    position: "",
+    logo: salesforceLogo,
+    logoBg: "#383E56",
   },
-  // {
-  // image: aucCert,
-  // name: "Alia Shoeib",
-  // position: "Dean of the School of Continuing Education",
-  // logo: NU,
-  // logoBg: "#383E56",
-  // },
   {
     name: "Ahmed Elmahdy",
     position: "Dean of the School of ITCS at Nile University",
     image: graduationCert,
     logo: nuItCs,
     logoSize: "w-[100%] h-[100%]",
+    logoBg: "#E6DEDD",
+  },
+  {
+    image: aucCert,
+    name: "Alia Shoeib",
+    position: "Dean of the School of Continuing Education",
+    logo: AUC,
     logoBg: "#E6DEDD",
   },
 ]
@@ -424,7 +456,7 @@ const projects = [
   },
 ]
 
-const CV_LINK = "https://nileuniversity-my.sharepoint.com/:b:/g/personal/m_gamalaldeen_nu_edu_eg/EWhak2fIyj1Hsp04Y2Aax9UBH79ZztjP-7KUoarYhkEMtg?e=1q6AT2"
+const CV_LINK = "https://nileuniversity-my.sharepoint.com/:b:/g/personal/m_gamalaldeen_nu_edu_eg/IQBAv0Kwu6TsSoGwt7VvLZXfAcNQ_m8LHRaJMrDK_XIX2sw?e=moKplo"
 const CV_FILE = import.meta.env.BASE_URL + "/MohabGamalCV.pdf"
 const isTouchScreen = "ontouchstart" in window || navigator.msMaxTouchPoints
 

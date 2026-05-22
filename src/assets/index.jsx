@@ -17,25 +17,30 @@ import typescript from "./tech/typescript-flipped.png"
 import solidity from "./tech/solidity.svg"
 import jest from "./tech/jest.webp"
 import githubActions from "./tech/github_actions.webp"
-import aws from "./tech/aws.webp"
+import aws from "./tech/aws1.webp"
 import next from "./tech/next-flipped.png"
 import socketIo from "./tech/socket-io.webp"
 import nest from "./tech/nestjs.svg"
 import mongoose from "./tech/mongoose.png"
 import postgres from "./tech/postgres.svg"
-import prisma from "./tech/prisma.svg"
+import prisma from "./tech/prisma.png"
 import githubGIF from "./github-animation.json"
 import facebookGIF from "./facebook-animation.json"
 import BookingMERN from "./BookingMERN.webp"
-
-import armedForces from "./company/armedForces.png"
+import salesforceLogo from "./tech/salesforce.png"
+// companies
+import cloudzlab from "./company/Cloudzlab.svg"
+import cloud11 from "./company/Cloud-11.png"
+import xperience1st from "./company/Xperience1st.png"
 import AUC from "./company/AUC.ico"
 import nuItCs from "./company/NU ITCS.png"
 import NU from "./company/NU.ico"
-import nestRealtor from "./nestRealtor.webp"
+
 import aucCert from "./AUC B1 Cert.webp"
 import graduationCert from "./graduationCert.webp"
-
+import salesforceDev1 from "./Salesforce Dev 1.png"
+import trailheadLogo from "./tech/Trailhead.png"
+import nestRealtor from "./nestRealtor.webp"
 import Supply from "./Supply.webp"
 import Portfolio from "/Portfolio.webp"
 import email from "./email.svg"
@@ -206,16 +211,21 @@ export {
 	reactjs,
 	tailwind,
 	typescript,
-	armedForces,
+	cloud11,
+	cloudzlab,
+	xperience1st,
+	salesforceLogo,
 	AUC,
 	nuItCs,
 	NU,
 	Supply,
 	nestRealtor,
+	trailheadLogo,
 	Portfolio,
 	email,
 	cv,
 	jest,
+	salesforceDev1,
 	githubActions,
 	express,
 	solidity,
